@@ -1,5 +1,5 @@
 (function(){
-    angular.module('TimeWaste')
+    angular.module('SafeConnect')
     .controller('NavigationController', ['$scope', '$http', "$state", function($scope, $http, $state){
         if (localStorage['User-Data']){
             $scope.loggedIn = true;

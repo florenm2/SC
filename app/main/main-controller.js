@@ -1,5 +1,5 @@
 (function(){
-    angular.module('TimeWaste')
+    angular.module('SafeConnect')
     .controller('MainController', ['$scope', '$http', '$interval', 
                         function (  $scope,   $http,   $interval){
     

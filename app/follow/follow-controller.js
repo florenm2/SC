@@ -1,5 +1,5 @@
 (function(){
-	angular.module('TimeWaste')
+	angular.module('SafeConnect')
 	.controller('FollowController', ['$scope', '$http', function($scope, $http){
 		
 		$scope.user = JSON.parse(localStorage['User-Data']);

@@ -1,5 +1,5 @@
 (function(){
-    angular.module('TimeWaste')
+    angular.module('SafeConnect')
     .controller('EditProfileController', ['Upload', '$scope', '$state', '$http',               
                             function(      Upload,   $scope,   $state,   $http){
     

@@ -1,5 +1,5 @@
 (function(){
-    angular.module('TimeWaste', ['ui.router', 'ngFileUpload'])
+    angular.module('SafeConnect', ['ui.router', 'ngFileUpload'])
             .config(function($stateProvider, $urlRouterProvider){
             
             $urlRouterProvider.otherwise('/');

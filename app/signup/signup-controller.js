@@ -1,5 +1,5 @@
 (function(){
-    angular.module('TimeWaste')
+    angular.module('SafeConnect')
 .controller('SignupController', ['$scope', '$state', '$http', function($scope, $state, $http){
         
         $scope.createUser = function(){
