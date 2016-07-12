@@ -1,8 +1,6 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-var multipart = require('connect-multiparty');
-var multipartMiddleware = multipart();
 
 var app = express();
 var authenticationController = require('./server/controllers/authentication-controller');
@@ -13,12 +11,8 @@ var usersController = require('./server/controllers/users-controller');
 mongoose.connect('mongodb://mary:1234@jello.modulusmongo.net:27017/d8exuWun');
 
 app.use(bodyParser.json());
-app.use(multipartMiddleware);
 app.use('/app', express.static(__dirname + "/app" ));
 app.use('/node_modules', express.static(__dirname + "/node_modules"));
-app.use('/uploads', express.static(__dirname + "/uploads"));
-
-
 
 app.get('/', function(req, res){
     res.sendfile('index.html');
@@ -29,7 +23,6 @@ app.post('/api/user/signup', authenticationController.signup);
 app.post('/api/user/login', authenticationController.login);
 
 //Profile
-app.post('/api/profile/editPhoto', multipartMiddleware, profileController.updatePhoto);
 app.post('/api/profile/updateUsername', profileController.updateUsername);
 app.post('/api/profile/updateBio', profileController.updateBio);
 
